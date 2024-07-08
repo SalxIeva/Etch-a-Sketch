@@ -69,7 +69,8 @@ const createGrid = (size) => {
         
         // Add hover event listener
         gridDiv.addEventListener("mouseover", () => {
-            gridDiv.style.backgroundColor = "black";
+            const randomColor = getRandomColor();
+            gridDiv.style.backgroundColor = randomColor;
         });
 
         gridContainer.appendChild(gridDiv);
@@ -81,5 +82,18 @@ createGrid(16);
 
 // ADDITIONAL FEATURES
 // For random color change: Modify the hover effect function to set a random background color. (use Math.random())
+
+const randomNumb = (maxNum) => {
+    return Math.floor(Math.random() * maxNum);
+};
+
+const getRandomColor = () => {
+    const h = randomNumb(360);
+    const s = randomNumb(100);
+    const l = randomNumb(100);
+
+    return `hsl(${h}deg, ${s}%, ${l}%)`;
+};
+
 // For progressive darkening: Modify the hover effect function to increase the opacity of the grid cell on each hover.
 
