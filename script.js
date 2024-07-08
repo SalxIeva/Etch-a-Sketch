@@ -69,6 +69,8 @@ const resetGame = () => {
 
 resetBtn.addEventListener("click", resetGame);
 
+resetBtnDiv.appendChild(resetBtn);
+document.body.appendChild(resetBtnDiv);
 // ADDITIONAL FEATURES
 // For random color change: Modify the hover effect function to set a random background color. (use Math.random())
 // For progressive darkening: Modify the hover effect function to increase the opacity of the grid cell on each hover.
