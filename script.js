@@ -57,9 +57,14 @@ resetBtn.textContent = "Reset Grid";
 const resetGame = () => {
     const userInput = prompt("Please enter a number for your grid size between 1 and 16");
     const size = parseInt(userInput);
-    return size;
-
     
+    // Make sure user enters correct input
+    if (!isNaN(size) && size < 0 && size >= 16) {
+        createGrid(size);
+    } else {
+        alert("Please enter a valid input between 1 and 16!");
+    };
+    return size;
 };
 
 // ADDITIONAL FEATURES
