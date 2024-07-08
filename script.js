@@ -10,6 +10,11 @@ console.log("Hello");
 // Add event listener to the reset button using ("click", resetGame)
 
 const resetBtnDiv = document.createElement("div");
+resetBtnDiv.style.margin = "20px";
+resetBtnDiv.style.display = "flex";
+resetBtnDiv.style.width = "95%";
+resetBtnDiv.style.alignItems = "center";
+resetBtnDiv.style.justifyContent = "center";
 const resetBtn = document.createElement("button");
 resetBtn.textContent = "Reset Grid";
 
