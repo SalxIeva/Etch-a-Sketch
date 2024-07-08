@@ -82,7 +82,7 @@ createGrid(16);
 // ADDITIONAL FEATURES
 // For random color change: Modify the hover effect function to set a random background color. (use Math.random())
 
-const randomColor = (maxNum) => {
+const randomNumb = (maxNum) => {
     return Math.floor(Math.random() * maxNum);
 }
 // For progressive darkening: Modify the hover effect function to increase the opacity of the grid cell on each hover.
