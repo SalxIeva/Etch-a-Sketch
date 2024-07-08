@@ -84,6 +84,15 @@ createGrid(16);
 
 const randomNumb = (maxNum) => {
     return Math.floor(Math.random() * maxNum);
-}
+};
+
+const getRandomColor = () => {
+    const h = randomNumb(360);
+    const s = randomNumb(100);
+    const l = randomNumb(100);
+
+    return `hsl(${h}deg, ${s}%, ${l}%)`;
+};
+
 // For progressive darkening: Modify the hover effect function to increase the opacity of the grid cell on each hover.
 
