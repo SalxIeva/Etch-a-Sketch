@@ -2,8 +2,36 @@ console.log("Hello");
 
 // PSEUDO CODE
 
-// Create a div container to store grid div's 
+// Create a button container
+// Create a button , that will later be appended to its container
+// Create a reset grid function
+// Prompt the user for new grid size
+// Call createGrid function to create a grid 
+// Add event listener to the reset button using ("click", resetGame)
 
+const resetBtnDiv = document.createElement("div");
+const resetBtn = document.createElement("button");
+resetBtn.textContent = "Reset Grid";
+
+const resetGame = () => {
+    const userInput = prompt("Please enter a number for your grid size between 1 and 16");
+    const size = parseInt(userInput);
+    
+    // Make sure user enters correct input
+    if (!isNaN(size) && size && 0 || size <= 16) {
+        createGrid(size);
+    } else {
+        alert("Please enter a valid input between 1 and 16!");
+    };
+    return size;
+};
+
+resetBtn.addEventListener("click", resetGame);
+
+resetBtnDiv.appendChild(resetBtn);
+document.body.appendChild(resetBtnDiv);
+
+// Create a div container to store grid div's 
 // Create a function to create grid
 // Inside the function loop size * size to create a grid
 // Add a hover event listener to the grid div.
@@ -43,34 +71,6 @@ const createGrid = (size) => {
 
 createGrid(16);
 
-// Create a button container
-// Create a button , that will later be appended to its container
-// Create a reset grid function
-// Prompt the user for new grid size
-// Call createGrid function to create a grid 
-// Add event listener to the reset button using ("click", resetGame)
-
-const resetBtnDiv = document.createElement("div");
-const resetBtn = document.createElement("button");
-resetBtn.textContent = "Reset Grid";
-
-const resetGame = () => {
-    const userInput = prompt("Please enter a number for your grid size between 1 and 16");
-    const size = parseInt(userInput);
-    
-    // Make sure user enters correct input
-    if (!isNaN(size) && size < 0 && size >= 16) {
-        createGrid(size);
-    } else {
-        alert("Please enter a valid input between 1 and 16!");
-    };
-    return size;
-};
-
-resetBtn.addEventListener("click", resetGame);
-
-resetBtnDiv.appendChild(resetBtn);
-document.body.appendChild(resetBtnDiv);
 // ADDITIONAL FEATURES
 // For random color change: Modify the hover effect function to set a random background color. (use Math.random())
 // For progressive darkening: Modify the hover effect function to increase the opacity of the grid cell on each hover.
