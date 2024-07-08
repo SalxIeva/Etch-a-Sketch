@@ -15,7 +15,17 @@ console.log("Hello");
 const gridContainer = document.createElement("div");
 gridContainer.id = "grid-container";
 
-const createGrid = (size) => {}
+const createGrid = (size) => {
+    for(var i = 0; i < size * size; i++) {
+        const gridDiv = document.createElement("div");
+        gridDiv.classList.add("grid-item");
+        gridDiv.style.width = `${gridItemSize}px`;
+        gridDiv.style.height = `${gridItemSize}px`;
+
+        gridContainer.appendChild(gridDiv);
+    };
+    document.body.appendChild(gridContainer);
+}
 // Create a button container
 // Create a button , that will later be appended to its container
 // Create a reset grid function
