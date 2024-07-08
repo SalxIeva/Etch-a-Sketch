@@ -54,6 +54,14 @@ const resetBtnDiv = document.createElement("div");
 const resetBtn = document.createElement("button");
 resetBtn.textContent = "Reset Grid";
 
+const resetGame = () => {
+    const userInput = prompt("Please enter a number for your grid size between 1 and 16");
+    const size = parseInt(userInput);
+    return size;
+
+    
+};
+
 // ADDITIONAL FEATURES
 // For random color change: Modify the hover effect function to set a random background color. (use Math.random())
 // For progressive darkening: Modify the hover effect function to increase the opacity of the grid cell on each hover.
