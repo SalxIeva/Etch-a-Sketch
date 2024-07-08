@@ -41,13 +41,18 @@ const createGrid = (size) => {
     document.body.appendChild(gridContainer);
 };
 
-createGrid(2);
+createGrid(16);
+
 // Create a button container
 // Create a button , that will later be appended to its container
 // Create a reset grid function
 // Prompt the user for new grid size
 // Call createGrid function to create a grid 
 // Add event listener to the reset button using ("click", resetGame)
+
+const resetBtnDiv = document.createElement("div");
+const resetBtn = document.createElement("button");
+resetBtn.textContent = "Reset Grid";
 
 // ADDITIONAL FEATURES
 // For random color change: Modify the hover effect function to set a random background color. (use Math.random())
