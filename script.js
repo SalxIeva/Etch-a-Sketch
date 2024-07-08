@@ -15,7 +15,10 @@ resetBtnDiv.style.display = "flex";
 resetBtnDiv.style.width = "95%";
 resetBtnDiv.style.alignItems = "center";
 resetBtnDiv.style.justifyContent = "center";
+
 const resetBtn = document.createElement("button");
+resetBtn.style.width = "100px";
+resetBtn.style.height = "50px";
 resetBtn.textContent = "Reset Grid";
 
 const resetGame = () => {
