@@ -69,7 +69,8 @@ const createGrid = (size) => {
         
         // Add hover event listener
         gridDiv.addEventListener("mouseover", () => {
-            gridDiv.style.backgroundColor = "black";
+            const randomColor = getRandomColor();
+            gridDiv.style.backgroundColor = randomColor;
         });
 
         gridContainer.appendChild(gridDiv);
