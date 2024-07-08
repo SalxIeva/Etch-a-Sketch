@@ -15,10 +15,10 @@ gridContainer.id = "grid-container";
 const createGrid = (size) => {
     // Clear previous grid
     gridContainer.innerHTML = '';
-    
+
     // Add flexbox to make divs appear as grid
     gridContainer.style.display = "flex";
-    gridContainer.style.wrap = "wrap";
+    gridContainer.style.flexWrap = "wrap";
     gridContainer.style.width = "600px";
     gridContainer.style.height = "600px";
     
@@ -30,11 +30,18 @@ const createGrid = (size) => {
         gridDiv.classList.add("grid-item");
         gridDiv.style.width = `${gridItemSize}px`;
         gridDiv.style.height = `${gridItemSize}px`;
+        
+        // Add hover event listener
+        gridDiv.addEventListener("mouseover", () => {
+            gridDiv.style.backgroundColor = "black";
+        });
 
         gridContainer.appendChild(gridDiv);
     };
     document.body.appendChild(gridContainer);
-}
+};
+
+createGrid(2);
 // Create a button container
 // Create a button , that will later be appended to its container
 // Create a reset grid function
