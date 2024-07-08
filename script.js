@@ -5,9 +5,6 @@ console.log("Hello");
 // Create a div container to store grid div's 
 
 // Create a function to create grid
-// Clear previous grid
-// Add flexbox to make divs appear as grid
-// Calculate the size of each grid
 // Inside the function loop size * size to create a grid
 // Add a hover event listener to the grid div.
 // Append each grid div to the container
@@ -15,7 +12,36 @@ console.log("Hello");
 const gridContainer = document.createElement("div");
 gridContainer.id = "grid-container";
 
+const createGrid = (size) => {
+    // Clear previous grid
+    gridContainer.innerHTML = '';
 
+    // Add flexbox to make divs appear as grid
+    gridContainer.style.display = "flex";
+    gridContainer.style.flexWrap = "wrap";
+    gridContainer.style.width = "600px";
+    gridContainer.style.height = "600px";
+    
+    // Calculate the size of each grid
+    const gridItemSize = (600 / size);
+
+    for(var i = 0; i < size * size; i++) {
+        const gridDiv = document.createElement("div");
+        gridDiv.classList.add("grid-item");
+        gridDiv.style.width = `${gridItemSize}px`;
+        gridDiv.style.height = `${gridItemSize}px`;
+        
+        // Add hover event listener
+        gridDiv.addEventListener("mouseover", () => {
+            gridDiv.style.backgroundColor = "black";
+        });
+
+        gridContainer.appendChild(gridDiv);
+    };
+    document.body.appendChild(gridContainer);
+};
+
+createGrid(2);
 // Create a button container
 // Create a button , that will later be appended to its container
 // Create a reset grid function
