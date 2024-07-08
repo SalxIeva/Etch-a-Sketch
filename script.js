@@ -15,7 +15,7 @@ console.log("Hello");
 const gridContainer = document.createElement("div");
 gridContainer.id = "grid-container";
 
-
+const createGrid = (size) => {}
 // Create a button container
 // Create a button , that will later be appended to its container
 // Create a reset grid function
