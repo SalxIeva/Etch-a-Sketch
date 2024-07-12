@@ -66,6 +66,7 @@ const createGrid = (size) => {
     // Clear previous grid
     gridContainer.innerHTML = '';
 
+
     // Add flexbox to make divs appear as grid
     gridContainer.style.display = "flex";
     gridContainer.style.flexWrap = "wrap";
