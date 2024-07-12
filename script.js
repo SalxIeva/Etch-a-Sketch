@@ -64,7 +64,9 @@ gridContainer.style.border = "2px solid black";
 
 const createGrid = (size) => {
     // Clear previous grid
-    gridContainer.innerHTML = '';
+    while (gridContainer.firstChild) {
+        gridContainer.removeChild(gridContainer.firstChild);
+    }
 
 
     // Add flexbox to make divs appear as grid
