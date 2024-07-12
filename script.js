@@ -26,7 +26,7 @@ const resetGame = () => {
     const size = parseInt(userInput);
     
     // Make sure user enters correct input
-    if (!isNaN(size) && size && 0 || size <= 16) {
+    if (!isNaN(size) && size > 0 && size <= 16) {
         createGrid(size);
     } else {
         alert("Please enter a valid input between 1 and 16!");
@@ -66,11 +66,17 @@ const createGrid = (size) => {
         gridDiv.classList.add("grid-item");
         gridDiv.style.width = `${gridItemSize}px`;
         gridDiv.style.height = `${gridItemSize}px`;
+        gridDiv.style.opacity = 1;
         
         // Add hover event listener
         gridDiv.addEventListener("mouseover", () => {
             const randomColor = getRandomColor();
             gridDiv.style.backgroundColor = randomColor;
+
+            let currentOpacity = parseFloat(gridDiv.style.opacity);
+            if (currentOpacity > 0) {
+                gridDiv.style.opacity = currentOpacity - 0.1;
+            }
         });
 
         gridContainer.appendChild(gridDiv);
@@ -96,4 +102,6 @@ const getRandomColor = () => {
 };
 
 // For progressive darkening: Modify the hover effect function to increase the opacity of the grid cell on each hover.
-
+// const increaseOpacity = () => {
+//     for (var i = 1; )
+// }
