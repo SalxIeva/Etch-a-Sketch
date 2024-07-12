@@ -39,14 +39,24 @@ resetBtn.addEventListener("click", resetGame);
 resetBtnDiv.appendChild(resetBtn);
 document.body.appendChild(resetBtnDiv);
 
-// Create a div container to store grid div's 
 // Create a function to create grid
 // Inside the function loop size * size to create a grid
 // Add a hover event listener to the grid div.
 // Append each grid div to the container
 // Add hover effect to each grid div to change color when hoovered over it
+
+// Create a wrapper container to center gridContainer
+const wrapperContainer = document.createElement("div");
+wrapperContainer.style.display = "flex";
+wrapperContainer.style.alignItems = "center";
+wrapperContainer.style.justifyContent = "center";
+wrapperContainer.style.height = "600px";
+
+
+// Create a div container to store grid div's 
 const gridContainer = document.createElement("div");
 gridContainer.id = "grid-container";
+gridContainer.style.border = "1px solid black";
 
 const createGrid = (size) => {
     // Clear previous grid
@@ -81,7 +91,10 @@ const createGrid = (size) => {
 
         gridContainer.appendChild(gridDiv);
     };
-    document.body.appendChild(gridContainer);
+    wrapperContainer.appendChild(gridContainer);
+    document.body.appendChild(wrapperContainer);
+
+    // document.body.appendChild(gridContainer);
 };
 
 createGrid(16);
