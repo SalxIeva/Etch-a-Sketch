@@ -17,9 +17,13 @@ resetBtnDiv.style.alignItems = "center";
 resetBtnDiv.style.justifyContent = "center";
 
 const resetBtn = document.createElement("button");
-resetBtn.style.width = "100px";
+resetBtn.style.width = "150px";
 resetBtn.style.height = "50px";
 resetBtn.textContent = "Reset Grid";
+resetBtn.style.borderRadius = "10px";
+resetBtn.style.backgroundColor = '#8C1C31';
+resetBtn.style.color = 'white';
+resetBtn.style.fontSize = '20px';
 
 const resetGame = () => {
     const userInput = prompt("Please enter a number for your grid size between 1 and 16");
@@ -56,7 +60,7 @@ wrapperContainer.style.height = "600px";
 // Create a div container to store grid div's 
 const gridContainer = document.createElement("div");
 gridContainer.id = "grid-container";
-gridContainer.style.border = "1.5px solid black";
+gridContainer.style.border = "2px solid black";
 
 const createGrid = (size) => {
     // Clear previous grid
