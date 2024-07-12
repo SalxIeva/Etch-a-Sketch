@@ -12,7 +12,7 @@ console.log("Hello");
 const resetBtnDiv = document.createElement("div");
 resetBtnDiv.style.margin = "20px";
 resetBtnDiv.style.display = "flex";
-resetBtnDiv.style.width = "95%";
+resetBtnDiv.style.width = "auto";
 resetBtnDiv.style.alignItems = "center";
 resetBtnDiv.style.justifyContent = "center";
 
