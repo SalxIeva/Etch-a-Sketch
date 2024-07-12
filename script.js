@@ -56,7 +56,7 @@ wrapperContainer.style.height = "600px";
 // Create a div container to store grid div's 
 const gridContainer = document.createElement("div");
 gridContainer.id = "grid-container";
-gridContainer.style.border = "1px solid black";
+gridContainer.style.border = "1.5px solid black";
 
 const createGrid = (size) => {
     // Clear previous grid
